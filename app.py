@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder='./assets')
 heroku = 1
 
 if heroku:
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL_RE']
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:yiishi@localhost:5432/medical_record'
 
