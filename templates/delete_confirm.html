@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="alert alert-danger mt-3" role="alert">
+    履歴を削除しようとしています
+</div>
+
+<p><h1 class="mt-4">本当に削除しますか？</h1></p>
+
+<div class="ms-3">
+    <p><h3>{{record.date}}</h3></p>
+    <p><病院名>  {{record.hospital}}</p>
+    <p><医師>  {{record.doctor}}</p>
+</div>
+
+<form method="POST">
+    <button type="submit" value="delete" name="delornot" class="btn btn-danger">削除</button> 
+    <button type="submit" value="return" name="delornot" class="btn btn-secondary">いいえ</button>
+</form>
+
+{% endblock %}
